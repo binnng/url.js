@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="description" content="Url.js : 从URL中提取信息的工具。">
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>Url.js</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/binnng/url.js">View on GitHub</a>
+
+          <h1 id="project_title">Url.js</h1>
+          <h2 id="project_tagline">从URL中提取信息的工具。</h2>
+
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/binnng/url.js/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/binnng/url.js/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h1>
+<a name="urljs" class="anchor" href="#urljs"><span class="octicon octicon-link"></span></a>url.js</h1>
+
+<p>从URL中提取信息的工具。</p>
+
+<h3>
+<a name="api" class="anchor" href="#api"><span class="octicon octicon-link"></span></a>API</h3>
+
+<h4>
+<a name="urlparse" class="anchor" href="#urlparse"><span class="octicon octicon-link"></span></a>url.parse</h4>
+
+<div class="highlight highlight-javascript"><pre><span class="kd">var</span> <span class="nx">myUrl</span> <span class="o">=</span> <span class="nx">url</span><span class="p">.</span><span class="nx">parse</span><span class="p">(</span><span class="s2">"http://www.demo.com/?a=1"</span><span class="p">);</span>
+
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">myUrl</span><span class="p">.</span><span class="nx">host</span><span class="p">);</span> <span class="c1">// =&gt; "www.demo.com"</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">myUrl</span><span class="p">.</span><span class="nx">search</span><span class="p">);</span> <span class="c1">// =&gt; "?a=1"</span>
+</pre></div>
+
+<h4>
+<a name="urlsearch" class="anchor" href="#urlsearch"><span class="octicon octicon-link"></span></a>url.search</h4>
+
+<div class="highlight highlight-javascript"><pre><span class="kd">var</span> <span class="nx">searchData</span> <span class="o">=</span> <span class="nx">url</span><span class="p">.</span><span class="nx">search</span><span class="p">(</span><span class="s2">"http://www.demo.com/?a=1"</span><span class="p">);</span> <span class="c1">// =&gt; {a:1}</span>
+</pre></div>
+
+<h4>
+<a name="urlhash" class="anchor" href="#urlhash"><span class="octicon octicon-link"></span></a>url.hash</h4>
+
+<div class="highlight highlight-javascript"><pre><span class="kd">var</span> <span class="nx">hashData</span> <span class="o">=</span> <span class="nx">url</span><span class="p">.</span><span class="nx">hash</span><span class="p">(</span><span class="s2">"http://www.demo.com/?a=1#b=2"</span><span class="p">);</span> <span class="c1">// =&gt; {b:2}</span>
+</pre></div>
+
+<h3>
+<a name="%E6%BA%90%E7%A0%81" class="anchor" href="#%E6%BA%90%E7%A0%81"><span class="octicon octicon-link"></span></a>源码</h3>
+
+<p><a href="http://binnng.github.io/url.js/docs/url.html">http://binnng.github.io/url.js/docs/url.html</a></p>
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">Url.js maintained by <a href="https://github.com/binnng">binnng</a></p>
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+    
+
+  </body>
+</html>

@@ -1,0 +1,27 @@
+{
+  "name": "binnng/url.js",
+  "main": "url.js",
+  "version": "0.0.1",
+  "homepage": "https://github.com/binnng/url.js",
+  "authors": [
+    "binnng <imbinnng@gmail.com>"
+  ],
+  "description": "Get query data from url",
+  "moduleType": [
+    "amd",
+    "globals"
+  ],
+  "keywords": [
+    "url",
+    "path",
+    "location"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "name": "url.js",
+  "repo": "binnng/url.js",
+  "description": "Get query data from url",
+  "version": "0.0.1",
+  "keywords": [
+    "url",
+    "path",
+    "location"
+  ],
+  "dependencies": {},
+  "development": {},
+  "license": "MIT",
+  "main": "url.js",
+  "scripts": [
+    "url.js"
+  ]
+}

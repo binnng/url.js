@@ -20,7 +20,7 @@
     return ret;
   };
   URL = {
-    format: function(url) {
+    parse: function(url) {
       return new WIN["URL"](url);
     },
     search: function(url) {
@@ -28,7 +28,7 @@
       if (url == null) {
         url = "";
       }
-      url = URL.format(url);
+      url = URL.parse(url);
       search = url.search;
       ret = search ? getDataFromParams(search.substr(1)) : null;
       return ret;
@@ -38,7 +38,7 @@
       if (url == null) {
         url = "";
       }
-      url = URL.format(url);
+      url = URL.parse(url);
       hash = url.hash;
       ret = hash ? getDataFromParams(hash.substr(1)) : null;
       return ret;

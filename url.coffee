@@ -30,20 +30,20 @@
     # 格式化传过来的URL地址
     # 返回一个`URL`对象
     # url: `String`
-    format: (url) -> new WIN["URL"] url
+    parse: (url) -> new WIN["URL"] url
 
-    # 从url中提取`search`的JSON
+    # 从url的search中提取的数据
     search: (url = "") ->
-      url = URL.format url
+      url = URL.parse url
       search = url.search
 
       ret = if search then getDataFromParams search.substr(1) else null
 
       ret
 
-    # 从url中提取`hash`的JSON
+    # 从url的hash中提取的数据
     hash: (url = "") ->
-      url = URL.format url
+      url = URL.parse url
       hash = url.hash
 
       ret = if hash then getDataFromParams hash.substr(1) else null

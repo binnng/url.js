@@ -1,3 +1,16 @@
+# ```
+# url.js 0.0.1
+# 
+# ! CopyRight: binnng http://github.com/binnng/url.js
+# Licensed under: MIT
+# http://binnng.github.io/url.js
+# ```
+
+# ### Fork me on [Github](https://github.com/binnng/url.js)!
+
+# ### [Homepage](http://binnng.github.io/url.js)
+
+
 ((WIN, DOC) ->
 
   decode = WIN["decodeURIComponent"]

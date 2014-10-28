@@ -26,4 +26,4 @@ var hashData = url.hash("http://www.demo.com/?a=1#b=2"); // => {b:2}
 ```
 
 ### 源码
-[http://binnng.github.io/url.js](http://binnng.github.io/url.js)
+[http://binnng.github.io/url.js/docs/url.html](http://binnng.github.io/url.js/docs/url.html)

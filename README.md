@@ -25,5 +25,17 @@ var searchData = url.search("http://www.demo.com/?a=1"); // => {a:1}
 var hashData = url.hash("http://www.demo.com/?a=1#b=2"); // => {b:2}
 ```
 
+### 安装
+
+* bower
+```
+bower install binnng/url.js
+```
+
+* component
+```
+component install binnng/url.js
+```
+
 ### 源码
 [http://binnng.github.io/url.js/docs/url.html](http://binnng.github.io/url.js/docs/url.html)

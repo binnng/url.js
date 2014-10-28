@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>url.js test</title>
+	<script type="text/javascript" src="bower_components/binnng/debug.js/debug.js"></script>
+	<script type="text/javascript" src="../url.js"></script>
+</head>
+<body>
+	<script type="text/javascript">
+
+		var getQueryData = url.search;
+		var getHashData = url.hash;
+
+		(function() {
+			var url = "http://www.baidu.com";
+
+			debug.warn(url);
+			debug.log(getQueryData(url));
+
+		})();
+
+		(function() {
+			var url = "http://www.baidu.com/a/?a=1";
+
+			debug.warn(url);
+			debug.log(getQueryData(url));
+
+		})();
+
+		(function() {
+			var url = "http://www.baidu.com/a/?a&b=1";
+
+			debug.warn(url);
+			debug.log(getQueryData(url));
+
+		})();
+
+		(function() {
+			var url = "http://www.baidu.com?a&b=1#test=hash";
+
+			debug.warn(url);
+			debug.log(getHashData(url));
+
+		})();
+
+		(function() {
+			var url = "http://www.baidu.com";
+
+			debug.warn(url);
+			debug.log(getQueryData(url));
+
+		})();
+	</script>
+</body>
+</html>

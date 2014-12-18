@@ -9,9 +9,11 @@
 # ### Fork me on [Github](https://github.com/binnng/url.js)!
 
 # ### [Homepage](http://binnng.github.io/url.js)
+  
+define "binnng/url.js", (require, exports, module) ->
 
-
-((WIN, DOC) ->
+  WIN = window
+  DOC = document
 
   decode = WIN["decodeURIComponent"]
 
@@ -37,13 +39,30 @@
 
     ret
 
+  class _URL
+
+    WIN_URL = WIN["URL"]
+
+    # 系统是否支持 URL 类
+    isSurportURL = typeof WIN_URL is "function"
+
+    constructor: (@url) ->
+      @search = @hash = null
+
+      search = (url.split "?")?[1]
+      @search = "##{search}" if search
+
+      hash = (url.split "#")?[1]
+      @hash = "##{hash}" if hash
+
+
 
   URL = 
 
     # 格式化传过来的URL地址
     # 返回一个`URL`对象
     # url: `String`
-    parse: (url) -> new WIN["URL"] url
+    parse: (url) -> new _URL url
 
     # 从url的search中提取的数据
     search: (url = "") ->
@@ -62,25 +81,13 @@
       ret = if hash then getDataFromParams hash.substr(1) else null
 
       ret
+
+    getDataFromParams: getDataFromParams
         
 
 
    # 暴露出去
   entry = URL
+  
+  module.exports = entry
 
-  if typeof module isnt "undefined" and module.exports
-    module.exports = entry
-
-  else if typeof define is "function"
-    define (require, exports, module) ->
-      module.exports = exports = -> entry
-
-  # 为angular定制
-  else if typeof WIN["angular"] is "object"
-    angular.module("binnng/url", []).factory "$url", -> entry
-
-  # 啥都不是，直接暴露到window
-  else
-    WIN["url"] = entry
-
-) window, document
